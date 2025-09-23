@@ -35,7 +35,7 @@ newgrp docker
 ```
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
 sudo dpkg -i minikube_latest_amd64.deb
-minikube start --vm-driver=docker --addons=ingress
+minikube start --vm-driver=docker --cpus=2 --memory=8192 --disk-size=40g --addons=ingress   #this update in 23/9/2025
 sudo snap install kubectl --classic
 ```
 ## Step 3: Deploy Ansible AWX via Operator
