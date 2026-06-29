@@ -45,6 +45,8 @@ cd awx-operator/
 git checkout 2.19.0
 export NAMESPACE=ansible-awx
 make deploy
+kubectl edit deployment awx-operator-controller-manager -n ansible-awx
+## edit this :  image: quay.io/brancz/kube-rbac-proxy:v0.15.0
 kubectl get pods -n ansible-awx
 ```
 
